@@ -19,12 +19,22 @@ public class ArrayListPractice{
 		for(int i = 0; i < list1.size(); i++){
 			System.out.print(list1.get(i) + ", ");
 		}
+		System.out.println();
 	}
 
 
 
 	public static void main(String[] args){
+		ArrayList<Integer> listA = new ArrayList<>();
+		for(int i = 5; i < 12; i++){
+			listA.add(i);
+		}
+		ArrayList<Integer> listB = new ArrayList<>();
+		for(int i = 3; i < 9; i++){
+			listB.add(i);
+		}
 
-
+		System.out.println(listCombine(listA, listB));
+		listPrinter(listA);
 	}
 }
