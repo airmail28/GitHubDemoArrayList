@@ -9,7 +9,7 @@ public class ArrayListPractice{
 			combolist.add(list1.get(i));
 		}
 		for(int i = 0; i < list2.size(); i++){
-			combolist.add(list1.get(i));
+			combolist.add(list2.get(i));
 		}
 		return combolist;
 	}
@@ -22,6 +22,19 @@ public class ArrayListPractice{
 		System.out.println();
 	}
 
+	//method 3 to remove any duplicates in a list
+	public static ArrayList<Integer> removeDuplicates(ArrayList<Integer> oldlist){
+		ArrayList<Integer> newlist = new ArrayList<>();
+		int a = oldlist.size();
+		for(int i = 0; i < a; i++){
+			for(int j = i; j < a; j++){
+				if(oldlist.get(i) == oldlist.get(j)){
+
+				}
+			}
+		}
+		return newlist;
+	}
 
 
 	public static void main(String[] args){
@@ -34,7 +47,12 @@ public class ArrayListPractice{
 			listB.add(i);
 		}
 
-		System.out.println(listCombine(listA, listB));
+		ArrayList<Integer> listC = new ArrayList<>();
+		listC = listCombine(listA, listB);
+
+		System.out.println(listC);
 		listPrinter(listA);
+
+		System.out.println(removeDuplicates(listC));
 	}
 }
