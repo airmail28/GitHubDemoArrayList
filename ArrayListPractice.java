@@ -25,12 +25,11 @@ public class ArrayListPractice{
 	//method 3 to remove any duplicates in a list
 	public static ArrayList<Integer> removeDuplicates(ArrayList<Integer> oldlist){
 		ArrayList<Integer> newlist = new ArrayList<>();
-		int a = oldlist.size();
-		for(int i = 0; i < a; i++){
-			for(int j = i; j < a; j++){
-				if(oldlist.get(i) == oldlist.get(j)){
-
-				}
+		int i = 0;
+		for(int j = i; j < oldlist.size(); j++){
+			if(oldlist.get(i) != oldlist.get(j)){
+				oldlist.remove(i);
+				i--;
 			}
 		}
 		return newlist;
